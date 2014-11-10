@@ -1,0 +1,16 @@
+{
+  "name": "atom-lgtm",
+  "main": "./lib/atom-lgtm",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "activationCommands": {
+    "atom-workspace": "atom-lgtm:toggle"
+  },
+  "repository": "https://github.com/atom/atom-lgtm",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}

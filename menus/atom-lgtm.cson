@@ -1,11 +1,4 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
-'context-menu':
-  'atom-text-editor': [
-    {
-      'label': 'Toggle atom-lgtm'
-      'command': 'atom-lgtm:toggle'
-    }
-  ]
 'menu': [
   {
     'label': 'Packages'
@@ -13,8 +6,8 @@
       'label': 'atom-lgtm'
       'submenu': [
         {
-          'label': 'Toggle'
-          'command': 'atom-lgtm:toggle'
+          'label': 'LGTM!'
+          'command': 'atom-lgtm:lgtm'
         }
       ]
     ]

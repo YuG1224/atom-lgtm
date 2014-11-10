@@ -4,13 +4,14 @@
   "version": "0.0.0",
   "description": "A short description of your package",
   "activationCommands": {
-    "atom-workspace": "atom-lgtm:toggle"
+    "atom-workspace": "atom-lgtm:lgtm"
   },
-  "repository": "https://github.com/atom/atom-lgtm",
+  "repository": "https://github.com/YuG1224/atom-lgtm",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
   "dependencies": {
+    "request": "^2.47.0"
   }
 }

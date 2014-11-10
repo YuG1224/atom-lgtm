@@ -1,31 +1,31 @@
+{View} = require 'atom'
+request = require 'request'
+
 module.exports =
-class AtomLgtmView
+class AtomLgtmView extends View
   constructor: (serializeState) ->
-    # Create root element
-    @element = document.createElement('div')
-    @element.classList.add('atom-lgtm',  'overlay', 'from-top')
-
-    # Create message element
-    message = document.createElement('div')
-    message.textContent = "The AtomLgtm package is Alive! It's ALIVE!"
-    message.classList.add('message')
-    @element.appendChild(message)
-
-    # Register command that toggles this view
-    atom.commands.add 'atom-workspace', 'atom-lgtm:toggle': => @toggle()
+    atom.workspaceView.command 'atom-lgtm:lgtm', => @lgtm()
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
 
   # Tear down any state and detach
   destroy: ->
-    @element.remove()
+    @detach()
 
-  # Toggle the visibility of this view
-  toggle: ->
-    console.log 'AtomLgtmView was toggled!'
+  lgtm: ->
+    option =
+      url: "http://www.lgtm.in/g"
+      json: true
 
-    if @element.parentElement?
-      @element.remove()
-    else
-      atom.workspaceView.append(@element)
+    request.get option, (err, res, body) ->
+      editor = atom.workspace.getActiveEditor()
+
+      text = """
+        #{editor.getText()}
+
+        #{body.markdown.split("\n")[0]}
+      """
+
+      editor.setText text
+      return

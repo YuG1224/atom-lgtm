@@ -1,5 +1,17 @@
 # atom-lgtm package
 
-A short description of your package.
+LGTM [:+1:](http://www.lgtm.in/u/ffR1)
 
-![A screenshot of your spankin' package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+[![LGTM](http://www.lgtm.in/p/ORuxJxzgn)](http://www.lgtm.in/i/ORuxJxzgn)
+
+## Usage
+
+Press `ctrl-alt-l`
+
+## License
+
+MIT
+
+## Author
+
+Yuji Yamaguchi
